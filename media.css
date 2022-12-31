@@ -1,0 +1,152 @@
+@media (max-width: 740px) {
+
+:root{
+    --Blue: hsl(223, 87%, 63%);
+
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+
+    --Font-Size: 15px;
+    --Font-Family: Libre Franklin;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--Font-Family);
+    font-size: var(--Font-Size);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.--container__logo{
+    width: 3rem;
+}
+
+.--container__image{
+    width: 20rem;
+    margin-top: 30px;
+}
+
+.--container__header > h1{
+    color: var(--Gray);
+    font-weight: 300;
+}
+
+.--container__header > h1 > span{
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+}
+
+.--container__header > p{
+    line-height: 40px;
+}
+
+.--container__inputs{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    place-items: center;
+    position: relative;
+}
+
+.--container__inputs > input[type="text"]{
+    background: transparent;
+    font-family: var(--Font-Family);
+    padding: 15px 20px;
+    border: none;
+    outline: 1px solid var(--Gray);
+    text-align: left;
+    border-radius: 555px;
+    width: 140%;
+    cursor: pointer;
+    color: var(--Very-Dark-Blue);
+}
+
+.--container__inputs > input[type="text"]::placeholder{
+    color: var(--Gray);
+}
+
+.--container__inputs > button{
+    background: var(--Blue);
+    color: white;
+    font-family: var(--Font-Family);
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    border-radius: 555px;
+    cursor: pointer;
+    margin-left: 0px;
+    width: 140%;
+    transition: all ease-in-out .15s;
+}
+
+.--container__inputs > button:hover{
+    filter: brightness(120%);
+}
+
+.--social-media{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+a:visited, a:link, a:active{
+    color: var(--Blue);
+    text-decoration: none;
+}
+
+.circle{
+    outline: 1px solid var(--Gray);
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: all ease-in-out .15s;
+}
+
+.circle:hover{
+    background: var(--Blue);
+    color: white;
+    outline: 1px solid var(--Blue);
+}
+
+.--bottom-text{
+    font-size: 10px;
+}
+
+.error{
+    outline: 1px solid var(--Light-Red) !important;
+}
+
+.error_mess{
+    color: var(--Light-Red);
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    font-size: 14px;
+    display: none;
+}
+}
